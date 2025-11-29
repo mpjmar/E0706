@@ -9,6 +9,21 @@ public class App {
         return numeros;
     }
 
+    public static void imprimeArray(int array[]) {
+        for (int i = 0; i < array.length; i++)
+            System.out.printf("|%3d ", i);
+        System.out.println("|");
+
+        for (int i = 0; i < array.length * 5 + 1; i++)
+            System.out.print("-");
+        System.out.println();
+
+        for (int i = 0; i < array.length; i++)
+            System.out.printf("|%3d ", array[i]);
+        System.out.println("|");
+        System.out.println();
+    }
+
     public static void main(String[] args) throws Exception {
 
         int numeros[] = new int[12];
@@ -30,31 +45,10 @@ public class App {
         System.out.println();
 
         System.out.println("Array original:");
-        for (int i = 0; i < numeros.length; i++)
-            System.out.printf("|%3d ", i);
-        System.out.println("|");
-
-        for (int i = 0; i < numeros.length * 5 + 1; i++)
-            System.out.print("-");
-        System.out.println();
-
-        for (int i = 0; i < numeros.length; i++)
-            System.out.printf("|%3d ", numeros[i]);
-        System.out.println("|");
-        System.out.println();
+        imprimeArray(numeros);
 
         numeros = rotaElementos(numeros);
         System.out.println("Array original:");
-        for (int i = 0; i < numeros.length; i++)
-            System.out.printf("|%3d ", i);
-        System.out.println("|");
-
-        for (int i = 0; i < numeros.length * 5 + 1; i++)
-            System.out.print("-");
-        System.out.println();
-
-        for (int i = 0; i < numeros.length; i++)
-            System.out.printf("|%3d ", numeros[i]);
-        System.out.println("|");
+        imprimeArray(numeros);
     }
 }
