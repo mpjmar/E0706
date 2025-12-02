@@ -2,7 +2,7 @@ public class App {
 
     public static int[] rotaElementos(int numeros[]) {
         int last = numeros[numeros.length - 1];
-        for (int i = numeros.length - 1; i > 0; i--) {
+        for (int i = numeros.length - 1; i > 1; i--) {
             numeros[i] = numeros[i - 1];
         }
         numeros[0] = last;
